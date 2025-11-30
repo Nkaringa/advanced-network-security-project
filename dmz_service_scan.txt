@@ -1,0 +1,13 @@
+# dmz_service_scan.txt
+# Command used:
+#   nmap -sV 10.10.20.10
+
+Starting Nmap 7.94 ( https://nmap.org ) at 2025-11-29 01:07 UTC
+Nmap scan report for 10.10.20.10
+Host is up (0.0010s latency).
+Not shown: 999 closed tcp ports
+PORT     STATE SERVICE VERSION
+8080/tcp open  http    SimpleHTTPServer 0.6 (Python 3.x)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 3.15 seconds

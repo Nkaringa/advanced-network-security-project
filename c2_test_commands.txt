@@ -1,0 +1,13 @@
+# c2_test_commands.txt
+# Simulated Command & Control (C2) traffic from Windows victim machine
+
+# 1. Attempt to contact a fake C2 server on TCP port 4444
+#    This traffic is expected to be BLOCKED by pfSense and/or logged by Suricata.
+curl http://10.10.10.101:4444/beacon
+
+# 2. Alternative using PowerShell Invoke-WebRequest:
+# Invoke-WebRequest -Uri "http://10.10.10.101:4444/beacon" -UseBasicParsing
+
+# These commands were used to:
+#   - Validate that C2-like outbound traffic is blocked by firewall rules.
+#   - Confirm that Suricata raises alerts for suspicious outbound connections.

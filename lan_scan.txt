@@ -1,0 +1,30 @@
+# lan_scan.txt
+# Command used:
+#   nmap -sS 10.10.10.0/24
+
+Starting Nmap 7.94 ( https://nmap.org ) at 2025-11-29 01:00 UTC
+Nmap scan report for 10.10.10.1
+Host is up (0.00056s latency).
+Not shown: 997 filtered tcp ports
+PORT     STATE SERVICE
+53/tcp   open  domain
+80/tcp   open  http
+443/tcp  open  https
+
+Nmap scan report for 10.10.10.100
+Host is up (0.0010s latency).
+Not shown: 997 closed tcp ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+3389/tcp open  ms-wbt-server
+445/tcp  open  microsoft-ds
+
+Nmap scan report for 10.10.10.101
+Host is up (0.0009s latency).
+Not shown: 997 filtered tcp ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+443/tcp  open  https
+
+Nmap done: 256 IP addresses (3 hosts up) scanned in 8.52 seconds
